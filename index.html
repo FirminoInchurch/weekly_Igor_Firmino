@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS Reports · inChurch</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="Favicon Igor.jpg">
+<style>
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-main: #22c55e;
+    --green-light: #dcfce7;
+    --green-dark: #15803d;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+  }
+  body { font-family: "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green-main); }
+  .brand-name { font-family: "Sora", sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text); }
+  .brand-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+  main { max-width: 900px; margin: 0 auto; padding: 56px 24px 80px; }
+  .hero { margin-bottom: 48px; }
+  .hero-eyebrow { font-size: 0.75rem; font-weight: 600; color: var(--green-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .hero h1 { font-family: "Sora", sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--text); letter-spacing: -0.8px; line-height: 1.15; }
+  .hero-line { width: 40px; height: 3px; background: var(--green-main); border-radius: 2px; margin-top: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px 20px; text-align: center; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .card.active { border-color: var(--green-main); }
+  .card.active:hover { box-shadow: 0 8px 24px rgba(34,197,94,0.15); }
+  .card.soon { opacity: 0.55; cursor: default; pointer-events: none; }
+  .card.soon:hover { transform: none; box-shadow: none; }
+  .avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--border); }
+  .card.active .avatar { border-color: var(--green-main); }
+  .avatar-placeholder { width: 72px; height: 72px; border-radius: 50%; background: var(--bg); border: 2px dashed var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--text-light); }
+  .card-name { font-family: "Sora", sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--text); }
+  .card-role { font-size: 0.75rem; color: var(--text-muted); }
+  .badge { font-size: 0.68rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: var(--green-light); color: var(--green-dark); }
+  .badge-soon { background: var(--bg); color: var(--text-light); border: 1px solid var(--border); }
+  footer { text-align: center; padding: 24px; font-size: 0.75rem; color: var(--text-light); border-top: 1px solid var(--border); background: var(--surface); }
+  @media (max-width: 700px) { .grid { grid-template-columns: repeat(2, 1fr); } header { padding: 20px; } main { padding: 36px 16px 60px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-dot"></div>
+    <div>
+      <div class="brand-name">CS Reports</div>
+      <div class="brand-sub">Customer Success · inChurch</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-eyebrow">Equipe de Customer Success</div>
+    <h1>Entregas<br>da Semana</h1>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="grid">
+
+    <!-- Igor Firmino -->
+    <a class="card active" href="igor/semana-15-06.html">
+      <img class="avatar" src="Foto Igor.jpg" alt="Igor Firmino">
+      <div>
+        <div class="card-name">Igor Firmino</div>
+        <div class="card-role">CS Specialist</div>
+      </div>
+      <span class="badge">Ver relatório</span>
+    </a>
+
+    <!-- Em Breve 2 -->
+    <div class="card soon">
+      <div class="avatar-placeholder">👤</div>
+      <div>
+        <div class="card-name">Em Breve</div>
+        <div class="card-role">CS Specialist</div>
+      </div>
+      <span class="badge badge-soon">Em breve</span>
+    </div>
+
+    <!-- Em Breve 3 -->
+    <div class="card soon">
+      <div class="avatar-placeholder">👤</div>
+      <div>
+        <div class="card-name">Em Breve</div>
+        <div class="card-role">CS Specialist</div>
+      </div>
+      <span class="badge badge-soon">Em breve</span>
+    </div>
+
+    <!-- Em Breve 4 -->
+    <div class="card soon">
+      <div class="avatar-placeholder">👤</div>
+      <div>
+        <div class="card-name">Em Breve</div>
+        <div class="card-role">CS Specialist</div>
+      </div>
+      <span class="badge badge-soon">Em breve</span>
+    </div>
+
+    <!-- Em Breve 5 -->
+    <div class="card soon">
+      <div class="avatar-placeholder">👤</div>
+      <div>
+        <div class="card-name">Em Breve</div>
+        <div class="card-role">CS Specialist</div>
+      </div>
+      <span class="badge badge-soon">Em breve</span>
+    </div>
+
+  </div>
+</main>
+
+<footer>CS Reports · inChurch · 2026</footer>
+
+</body>
+</html>
